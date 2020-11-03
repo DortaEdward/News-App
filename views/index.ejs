@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Updated News Daily</title>
+        <link rel="stylesheet" href="/css/index.css">
+    </head>
+    <body>
+        <header>
+            <h1>Updated News Daily</h1>
+            <p>
+                This Web application was made to gather all top
+                headlines from several sources using an API.
+            </p>
+        </header>
+
+        <div class="container">
+            <% for (let i = 0; i < articles.length; i++){ %>
+                <article class="article">
+                    <img src= '<%= articles[i].urlToImage %>' alt="Test Image">
+                    <div class="content">
+                        <h3><%= articles[i].title %></h3>
+                        <h6>Author: <%= articles[i].author %></h6>
+                        <p><%= articles[i].description %></p>
+                        <h4>Source: <%= articles[i].source.name %></h4>
+                        <h4>Url: <a href="<%= articles[i].url %>">Link To Article</a></h4>
+                    </div>
+                </article>
+            <% } %>
+        </div>
+
+    </body>
+</html>
