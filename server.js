@@ -1,9 +1,9 @@
 // importing env variables
 require('dotenv').config()
 const APIKEY = process.env.APIKEY
+const PORT = process.env.PORT
 
 const express = require('express');
-const PORT = 3000;
 const app = express();
 
 // api variables
@@ -15,8 +15,8 @@ app.use(express.static('public'))
 
 
 
-app.get('/',async(req, res)=>{
-        newsapi.v2.topHeadlines({
+app.get('/', async(req, res)=>{
+        await newsapi.v2.topHeadlines({
           country: 'us'
         }).then(response => {
             content = response.articles
