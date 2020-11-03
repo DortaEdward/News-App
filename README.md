@@ -9,4 +9,4 @@ I haven't used an api with a express server so I wanted to give it a go. Another
 ## User Story
 * Whenever the page is loaded, the server makes a api call to Newsapi and gets a object with articles and updates the cards on the ejs page with current articles.
 https://news-app-ft.herokuapp.com/
-
+* If the user finds an article they would like to read they can click the link and get redirected to the article's webpage
